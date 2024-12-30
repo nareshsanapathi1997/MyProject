@@ -1,0 +1,103 @@
+/* About.css */
+
+/* Fade-in and slide-up animations for text and cards */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animated {
+    animation-duration: 1.2s;
+    animation-fill-mode: both;
+  }
+  
+  /* Animations */
+  .fadeIn {
+    animation-name: fadeIn;
+  }
+  
+  .fadeInUp {
+    animation-name: fadeInUp;
+  }
+  
+  /* Hover effect for cards */
+  .hover-effect:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling cards */
+  .card {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Hover effect for the card */
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* List Items */
+  .list-group-item {
+    background-color: #f8f9fa;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Card Title and Content */
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #34495e;
+  }
+  
+  .card-body {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  /* Conclusion Section */
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e67e22;
+  }
+  
+  /* Section Spacing */
+  section {
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+  }
+  
+  /* Text Styling */
+  h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+  }
+  
+  /* Fancy Background Gradient for Introduction */
+  .introduction {
+    background: linear-gradient(45deg, #00b894, #6c5ce7);
+    color: white;
+    padding: 50px 0;
+    border-radius: 10px;
+  }
+  

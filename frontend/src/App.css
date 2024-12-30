@@ -1,0 +1,51 @@
+/* Default light mode styles */
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ddd;
+}
+
+/* Dark mode styles */
+.dark body {
+  background-color: #121212;
+  color: white;
+}
+
+.dark a {
+  color: #bbb;
+}
+
+.dark a:hover {
+  color: #ddd;
+}
+
+
+/* App.css */
+/* Ensure Toastify section behaves well */
+
+.Toastify {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;  /* Remove height if any */
+  display: none !important;  /* Hide it if not in use */
+}
+
+/* Fix for ToastContainer positioning (if needed) */
+.Toastify__toast-container {
+  position: fixed !important; /* Position it fixed */
+  top: 20px !important;       /* Set it to top */
+  right: 20px !important;     /* Set it to right */
+  z-index: 9999 !important;   /* Ensure it appears on top */
+  margin: 0 !important;       /* Remove margin */
+  padding: 0 !important;      /* Remove padding */
+}
+
+

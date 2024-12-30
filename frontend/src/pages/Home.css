@@ -1,0 +1,180 @@
+/* Home.css */
+
+/* General container styles */
+.home-container {
+    transition: background-color 0.3s ease;
+}
+
+/* Dark mode styles for the home container */
+.home-container.dark {
+    background-color: #121212; /* Dark background color */
+}
+
+/* Slider container */
+.slider-container {
+    width: 100%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the slider */
+    position: relative; /* Required for positioning arrows */
+}
+
+/* Image wrapper to hold each slide image */
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Slider image styling */
+.slider-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Customize dots */
+.slick-dots {
+    bottom: -20px; /* Adjust the position of dots */
+}
+
+.slick-dots li button:before {
+    color: #333; /* Default color of the dots */
+    font-size: 20px;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #000; /* Highlight active dot */
+}
+
+/* Customize arrow buttons */
+.slick-prev,
+.slick-next {
+    z-index: 2; /* Ensure arrows are above the image */
+    width: 40px; /* Size of the arrows */
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8; /* Slight transparency */
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    opacity: 1; /* Fully opaque on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.slick-prev {
+    left: 10px; /* Position arrow inside the container */
+}
+
+.slick-next {
+    right: 10px; /* Position arrow inside the container */
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: white; /* Arrow icon color */
+    font-size: 20px;
+}
+
+/* Content overlay on top of slider images */
+.content-overlay {
+    position: absolute;
+    bottom: 10%; /* Position at the bottom */
+    right: 5%; /* Align to the right side */
+    color: white; /* Default text color */
+    max-width: 40%; /* Limit content width */
+    text-align: right; /* Align text to the right */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.content-overlay.dark-overlay {
+    color: #fff; /* White text for dark mode */
+}
+
+/* Content header styles */
+.content-header {
+    font-size: 3.0rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Content quote styles */
+.content-quote {
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Add responsive adjustments */
+@media (max-width: 768px) {
+    .content-overlay {
+        bottom: 5%;
+        right: 2%;
+        max-width: 80%;
+    }
+
+    .content-header {
+        font-size: 1.9rem;
+    }
+
+    .content-quote {
+        font-size: 0.9rem;
+    }
+
+    /* Dark mode styles for content overlay on small screens */
+    .content-overlay.dark-overlay {
+        color: #fff; /* White text for small screens in dark mode */
+    }
+}
+
+
+
+
+
+/* Row settings for flex layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Add space between cards */
+    justify-content: space-between;
+}
+
+/* Uniform card dimensions */
+.card {
+    /* flex: 1 1 calc(33.333% - 20px); 3 cards per row with spacing */
+    /* max-width: calc(33.333% - 20px); */
+    height: 400px; /* Set a fixed height for all cards */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; Space out content inside card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Card shadow */
+    border-radius: 10px; /* Optional: Rounded corners */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+/* Uniform image dimensions */
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Fixed image height */
+    object-fit: cover; /* Ensure images fit uniformly */
+}
+
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Two cards per row */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        flex: 1 1 100%; /* One card per row */
+        max-width: 100%;
+    }
+}
+
